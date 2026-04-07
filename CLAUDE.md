@@ -8,7 +8,6 @@
 - Recently made redundant. Actively job searching.
 - Goal: Land a role in **AppSec / DevSecOps / Security Engineering** within 6 months
 - Secondary goal: Broaden stack with **React + TypeScript** to open more SaaS engineering roles
-- Financial runway: ~6 months
 - Study time available: 8–12 hrs/week
 - Location: Sydney, Australia
 
@@ -19,12 +18,6 @@
 - Honest assessments over reassurance — if my answer is wrong, tell me clearly and explain why
 - Deliberate practice under simulated pressure (interview conditions)
 
-## Known weak spots
-
-- Freezing under technical interview pressure (failed Clio interview on Pig Latin problem)
-- Pure Ruby methods vs Rails/ActiveRecord methods — easy to mix up
-- Problem-solving process breaks down without a framework — use PEDAC always
-- Frontend framework experience: zero (React/TypeScript is new territory)
 
 ## How to work with me in this repo
 
