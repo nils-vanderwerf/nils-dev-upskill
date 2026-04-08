@@ -8,7 +8,6 @@
 - Recently made redundant. Actively job searching.
 - Goal: Land a role in **AppSec / DevSecOps / Security Engineering** within 6 months
 - Secondary goal: Broaden stack with **React + TypeScript** to open more SaaS engineering roles
-- Financial runway: ~6 months
 - Study time available: 8–12 hrs/week
 - Location: Sydney, Australia
 
