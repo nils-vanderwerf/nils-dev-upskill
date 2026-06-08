@@ -38,10 +38,31 @@ export const AddJournalForm = () => {
     const newEntry = JSON.stringify(journalEntries)
 
     localStorage.setItem('journals', newEntry)
+    openDialog()
     reset()
   }
 
+  const openDialog = () => {
+    const modal = document.getElementById('success_modal')
+    if (modal instanceof HTMLDialogElement) {
+      modal.showModal()
+    }
+  }
+
   return (
+    <>
+    <dialog id="success_modal" className="modal">
+      <div className="modal-box">
+        <h3 className="font-bold text-lg">Successful!</h3>
+        <p className="py-4">The journal entry was successfully saved</p>
+        <div className="modal-action">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <form className="flex flex-col gap-3" onSubmit={handleSubmit(onFormSubmit)} >
       <label className="input w-full">
         Journal Title
@@ -94,5 +115,6 @@ export const AddJournalForm = () => {
       )}
       <button type="submit" className="btn btn-primary w-full">Save Journal</button>
     </form>
+    </>
   )
 }
