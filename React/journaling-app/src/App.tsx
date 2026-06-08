@@ -1,5 +1,6 @@
 import { Header } from './components/Header'
 import { Tabs } from './components/Tabs'
+import { AddJournalForm } from './components/AddJournalForm'
 
 export const App = () => {
   return (
@@ -8,9 +9,8 @@ export const App = () => {
         <div className="flex flex-col gap-4 rounded-xl bg-white p-4">
           <Header />
           <Tabs />
+          <AddJournalForm />
         </div>
-
-        {/* Form */}
       </div>
     </>
   )
