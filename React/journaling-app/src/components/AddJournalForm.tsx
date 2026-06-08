@@ -9,6 +9,11 @@ const schema = z.object({
 })
 
 type FormData = z.infer<typeof schema>
+type JournalEntry = FormData & 
+{ 
+  id: string,
+  date: Date
+ }
 
 export const AddJournalForm = () => {
   const {
@@ -20,11 +25,22 @@ export const AddJournalForm = () => {
 
   const onFormSubmit = (data: FormData) => {
     // 1. Create a unique ID for the journal entry.
-    // 2. Add the current timestamo for the journal entry.
+    const uuid = crypto.randomUUID()
+    
+    // 2. Add the current timestamp for the journal entry.
+    const entry: JournalEntry = {...data, id: uuid, date: new Date()}
+
     // 3. Retrieve the journal entries from storage.
+    const hasJournals = localStorage.getItem('journals')
+    const journalEntries = hasJournals ? JSON.parse(hasJournals) : []
     // 4. Save the journal entry to storage
-    console.log(data)
+    journalEntries.push(entry)
+    const newEntry = JSON.stringify(journalEntries)
+
+    localStorage.setItem('journals', newEntry)
+    reset()
   }
+
   return (
     <form className="flex flex-col gap-3" onSubmit={handleSubmit(onFormSubmit)} >
       <label className="input w-full">
