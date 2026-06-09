@@ -17,7 +17,7 @@ export const App = () => {
           <Header />
           <Tabs onSelectTab={handleTab} />
           <div className='flex flex-col gap-3 rounded-xl bg-gray-200 p-4'>
-            {currentTab === 'add' ? <AddJournalForm /> : <JournalList/> }
+            {currentTab === 'add' ? <AddJournalForm onEntryCreated={() => setCurrentTab('entries')} /> : <JournalList/> }
           </div>
         </div>
       </div>

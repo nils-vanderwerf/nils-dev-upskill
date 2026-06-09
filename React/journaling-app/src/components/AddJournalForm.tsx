@@ -15,7 +15,7 @@ type JournalEntry = FormData &
   date: Date
  }
 
-export const AddJournalForm = () => {
+export const AddJournalForm = ({ onEntryCreated }: { onEntryCreated: () => void }) => {
   const {
     register, 
     handleSubmit, 
@@ -38,8 +38,8 @@ export const AddJournalForm = () => {
     const newEntry = JSON.stringify(journalEntries)
 
     localStorage.setItem('journals', newEntry)
-    openDialog()
     reset()
+    onEntryCreated()
   }
 
   const openDialog = () => {
